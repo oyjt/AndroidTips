@@ -1,12 +1,13 @@
- # AndroidTips
+# AndroidTips
 A collections of tips in Android developing.
+Android开发总结。
 
-##前言
+## 前言
 我们在日常开发中，会遇到各种各样的问题，或大或小。正是通过解决这些问题，使得我们的开发技能得到进步。养成记录的好习惯，方便自己日后查看，也方便广大开发者能找到自己遇到的问题的解决方案。
 
-PS：持续更新中(last update date:2016-03-31 13:46)
+PS：持续更新中(last update date:2019-10-29 14:40)
 
-##目录
+## 目录
 >[一.模拟器](#genymotion)
 
 >[二.Android Studio](#AndroidStudio)
@@ -41,7 +42,21 @@ PS：持续更新中(last update date:2016-03-31 13:46)
 
 > [十七.自学资料](#selfStudy)
 
-##正文
+> [十八.RxJava](#RxJava)
+
+> [十九.开发框架（如MVP等）](#MVPMVC) 
+
+> [二十.Android开发面试资料](#Interview)
+
+> [二十一.Android逆向与安全](#Reverse)
+
+> [二十二.Android编译构建](#AndroidBuild) 
+
+> [二十三.Android动态加载](#AndroidDynamicLoad)
+
+> [二十四.Google最新的跨平台框架Flutter](#Flutter)
+
+## 正文
 <h6 id="genymotion">一.模拟器</h6>
 
 1.genymotion模拟器如何锁屏？
@@ -58,9 +73,10 @@ PS：持续更新中(last update date:2016-03-31 13:46)
  
  
 <h6 id="AndroidStudio">二.Android Studio</h6>
-1.Andorid Studio中有哪些好用的插件？
->答: 
 
+1.Andorid Studio中有哪些好用的插件？
+
+>答: 
 >1>.[GsonFormat](https://github.com/zzz40500/GsonFormat):用json数据一键生成JavaBeans
 
 >2>. [ADB Idea](https://github.com/pbreault/adb-idea)：ctrl + Shift + A 查找中添加常用卸载安装app的一些操作，无需命令行
@@ -106,7 +122,9 @@ PS：持续更新中(last update date:2016-03-31 13:46)
 
 >4.选中一侧代码(Alt+鼠标左键)
 
-![](http://7xr1jz.com1.z0.glb.clouddn.com/a.gif)
+>5.提取方法(Command+Option+M)
+
+![](http://stormzhang.com/image/53-extractmethod.gif)
 
 5.Android Studio中开启DDMS？
 
@@ -115,13 +133,18 @@ PS：持续更新中(last update date:2016-03-31 13:46)
 6.Android Studio与Gradle教程
 >答：
 
->1.[拥抱 Android Studio 之一：从 ADT 到 Android Studio](http://kvh.io/2015/12/01/embrace-android-studio-migration/)
+>1.[拥抱 Android Studio 之一：从 ADT 到 Android Studio](http://kvh.io/cn/embrace-android-studio-migration.html)
 
->2.[拥抱 Android Studio 之二：Android Studio 与 Gradle 深入](http://kvh.io/2015/12/17/embrace-android-studio-indepth/)
+>2.[拥抱 Android Studio 之二：Android Studio 与 Gradle 深入](http://kvh.io/cn/embrace-android-studio-indepth.html)
 
->3.[拥抱 Android Studio 之三：溯源，Groovy 与 Gradle 基础](http://kvh.io/2016/01/04/embrace-android-studio-groovy-gradle/)
+>3.[拥抱 Android Studio 之三：溯源，Groovy 与 Gradle 基础](http://kvh.io/cn/embrace-android-studio-groovy-gradle.html)
+
+>4.[拥抱 Android Studio 之四：Maven 仓库使用与私有仓库搭建](http://kvh.io/cn/embrace-android-studio-maven-deploy.html)
+
+>5.[拥抱 Android Studio 之五：Gradle 插件开发](http://kvh.io/cn/embrace-android-studio-gradle-plugin.html)
 
 <h6 id="Gradle">三.Gradle</h6>
+
 1.Gradle有什么教程?
 
 
@@ -145,6 +168,8 @@ PS：持续更新中(last update date:2016-03-31 13:46)
 
 >10.[Android 开发必备知识：我和 Gradle 有个约会(腾讯bugly团队)](http://mp.weixin.qq.com/s?__biz=MzA3NTYzODYzMg==&mid=401572523&idx=1&sn=19504d41b81f82a5388ae4f95072aea5&scene=0#wechat_redirect)
 
+>11.[Android Recipes for Android](./book/Gradle Recipes for Android.pdf)
+
 2.Gradle在编译的时候报如下错误：Error:Timeout waiting to lock buildscript class cache for build file ，怎么解决？
 
 >答:
@@ -161,6 +186,7 @@ PS：持续更新中(last update date:2016-03-31 13:46)
 [http://stackoverflow.com/questions/16754643/what-is-gradle-in-android-studio](http://stackoverflow.com/questions/16754643/what-is-gradle-in-android-studio)
 
 <h6 id="AndroidComponent">四.Android四大组件</h6>
+
 >1.Activity
 
 >2.Service
@@ -176,6 +202,7 @@ PS：持续更新中(last update date:2016-03-31 13:46)
 >* [BroadcastReceiverAndroid官方文档](http://developer.android.com/reference/android/content/BroadcastReceiver.html)
 
 <h6 id="animation">五.动画</h6>
+
 1.关于动画有什么教程?
 >1.[Android官方](http://developer.android.com/intl/zh-cn/guide/topics/graphics/index.html)
 
@@ -206,6 +233,7 @@ PS：持续更新中(last update date:2016-03-31 13:46)
 >13 .[Building Meaningful Motion(Plaid作者Android动画演讲分享)](https://photos.google.com/share/AF1QipMRnZL6gNbS06fnBNtKffRm9HBaxW8iP6w0L1T4nZYLI6s3wi_l8daT6mq4nwPf-w?key=LThZNmFXUUtmNi04bWlEYmVfcWdPenlvaDdCRU13)
 
 <h6 id="View">六.View</h6>
+
 1.View是如何绘制的？
 >1.[How Android Draws Views](http://developer.android.com/intl/zh-cn/guide/topics/ui/how-android-draws.html)
 
@@ -230,6 +258,8 @@ PS：持续更新中(last update date:2016-03-31 13:46)
 
 >6.[Canvas and Drawables
 ](http://developer.android.com/intl/zh-cn/guide/topics/graphics/2d-graphics.html)
+
+>7.[Android自定义View系列文章](https://github.com/GcsSloop/AndroidNote/blob/master/CustomView/README.md)
 
 3.Android touch事件分发机制
 >1.[Managing Touch Events in a ViewGroup](http://developer.android.com/intl/zh-cn/training/gestures/viewgroup.html)
@@ -284,6 +314,7 @@ PS：持续更新中(last update date:2016-03-31 13:46)
 >4.[Java资源大全中文版(awesome-java-cn)](https://github.com/jobbole/awesome-java-cn)
 
 <h6 id="obfuscate">九.混淆</h6>
+
 >1. Android混淆有什么资料教程?
 
 >答:
@@ -352,6 +383,7 @@ PS：持续更新中(last update date:2016-03-31 13:46)
 
 
 <h6 id="greatDeveloper">十二.值得关注的Android大牛</h6>
+
 >[国外](https://github.com/android-cn/android-dev-com)
 >
 >[国内](https://github.com/android-cn/android-dev-cn)
@@ -398,6 +430,8 @@ PS：持续更新中(last update date:2016-03-31 13:46)
 >* 5.[腾讯ISUX团队](http://isux.tencent.com/)
 >* 6.[BigNerdRanch团队（国外著名培训机构）](https://www.bignerdranch.com/blog/)
 >* 7.[ IBM developerworks(Java)](http://www.ibm.com/developerworks/cn/java/)
+>* 8.[考拉移动团队](https://blog.klmobile.app/)
+>* 9.[大搜车技术团队](https://blog.souche.com/)
 
 >**Android开发技术资讯网站**
 
@@ -414,17 +448,20 @@ PS：持续更新中(last update date:2016-03-31 13:46)
 >* 4.[Square(作品有著名的Android网络框架OkHttp,Retrofit)](https://github.com/square)
 >* 5.[TecentOpen(腾讯)](https://github.com/TencentOpen)
 >* 6.[500-px](https://github.com/500px)
+>* 7.[dropbox](https://github.com/dropbox)
 
 
 >**个人独立博客**
 
 
 <h6 id="Canvas">十三.Canvas</h6>
+
 >1.Canvas相关的教程:
 
 >* 1.[Canvas and Drawables(Android官方教程)](http://developer.android.com/guide/topics/graphics/2d-graphics.html)
 
 <h6 id="howToLearn">十四.学习方法/路线总结</h6>
+
 >1.[Android学习进阶路线导航线路](http://www.webtag123.com/android/38528.html)
 
 >2.[ Android学习路线指南](http://blog.csdn.net/singwhatiwanna/article/details/49560409)
@@ -441,8 +478,11 @@ PS：持续更新中(last update date:2016-03-31 13:46)
 
 
 <h6 id="kotlin">十五.Kotlin</h6>
+
 >1. [Kotlin官网](https://kotlinlang.org/)
+
 >2. [Kotlin官网（中文版）](http://kotlinlang.cn/)
+
 >3. [《Kotlin for android developers》中文版](https://wangjiegulu.gitbooks.io/kotlin-for-android-developers-zh/content/)
 
 
@@ -456,20 +496,81 @@ PS：持续更新中(last update date:2016-03-31 13:46)
 
 >3. [Android学习资料收集](https://github.com/Freelander/Android_Data)
 
-##参与维护
+
+<h6 id="RxJava">十八.RxJava</h6>
+
+> 1. [给 Android 开发者的 RxJava 详解](http://gank.io/post/560e15be2dca930e00da1083)
+> 2. [Adopting RxJava on Airbnb Android](https://realm.io/news/kau-felipe-lima-adopting-rxjava-airbnb-android/)
+> 3. [Grokking RxJava系列](http://blog.danlew.net/2014/09/15/grokking-rxjava-part-1/)
+> 4. [Reactivex官方教程](http://reactivex.io/tutorials.html)
+> 5. [RxJava Essentials 中文翻译版](https://github.com/yuxingxin/RxJava-Essentials-CN)
+> 6. [RxJava文档中文版](https://www.gitbook.com/book/mcxiaoke/rxdocs/details)
+> 7. [Awesome-RxJava](https://github.com/lzyzsd/Awesome-RxJava)
+>8. [Learning RxJava.pdf](./book/Learning RxJava.pdf)
+
+<h6 id="MVPMVC">十九.开发框架（如MVP等）</h6>
+
+ > 1.[一步一步实现Android的MVP框架](https://mp.weixin.qq.com/s?__biz=MzA3NTYzODYzMg==&mid=2653577546&idx=1&sn=e10be159645a3aa8f6d6f209420fb412&scene=0&key=8dcebf9e179c9f3a130f41588b53ffbaaf5f043957c7e472dbaed7fd6f0b0a1cb29335430d756e6473d09ff8fd11bc8c)
+ 
+ > 2.[Android Application Architecture](https://labs.ribot.co.uk/android-application-architecture-8b6e34acda65#.igkl0haav)
+ 
+ > 3.[Google官方Android架构示例](https://github.com/googlesamples/android-architecture)
+ 
+ 
+<h6 id="Interview">二十.Android开发面试资料</h6>
+
+> 1.[Android interview questions for 2-5 yrs experienced(2-5年经验的Android开发面试问题)](http://androidquestions.quora.com/Android-interview-questions-for-2-5-yrs-experienced)
+
+> 2.[250 Android Interview Questions(250道Android开发面试题)](https://androidquestions.quora.com/250-Android-Interview-Questions) 
+
+> 3.[Android interview questions(Android面试问题)](http://androidquestions.quora.com/Android-interview-questions)
+ 
+
+<h6 id="Reverse">二十一.Android逆向与安全</h6>
+
+> 1.[Android技术分享的逆向教程](http://blog.csdn.net/jiangwei0910410003/article/category/5897865)
+> 2. [Android反破解之一：Android Java混淆(ProGuard)](http://bbs.pediy.com/showthread.php?t=137112)
+> 3. [APK反破解之二：Android APK 签名比对](http://bbs.pediy.com/showthread.php?t=137500)
+> 4. [APK反破解之三：NDK编译.so动态库](http://bbs.pediy.com/showthread.php?t=141960)
+> 5. [APK反破解之四：Android代码动态加载技术](http://bbs.pediy.com/showthread.php?t=142256)
+ 
+ 
+<h6 id="AndroidBuild">二十二.Android编译构建</h6>
+
+> 1.[Android构建过程分析](http://mp.weixin.qq.com/s?__biz=MzI1NjEwMTM4OA==&mid=2651232113&idx=1&sn=02f413999ab0865e23d272e69b9e6196&scene=0#rd)
+
+<h6 id="AndroidDynamicLoad">二十三.Android动态加载</h6>
+
+> 1.[Android动态加载基础 ClassLoader工作机制](https://segmentfault.com/a/1190000004062880)
+> 
+> 2.[Android插件化研究](https://github.com/nuptboyzhb/AndroidPluginFramework)
+> 
+> 3.[Android插件化原理研究](http://weishu.me/2016/01/28/understand-plugin-framework-overview/)
+> 
+> 4.[Understanding Java ClassLoader](https://www.ibm.com/developerworks/java/tutorials/j-classloader/j-classloader.html)
+
+<h6 id="Flutter">二十四.Google最新的跨平台框架</h6>
+
+> 1.[闲鱼技术团队的Flutter研究文档](https://yuque.com/xytech/flutter)
+ 
+## 参与维护
 欢迎Pull Request和使用issue
 
-##LICENCE
+## LICENCE
 以上内容采用[ CC BY-NC-SA 3.0](http://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh)进行许可
 
-##关于我
+## 关于我
 网络ID:JohnTsai
 
 Android开发者，手机发烧友。
 
-我的博客:[http://www.johntsai.xyz](http://www.johntsai.xyz)
+我的博客:[https://www.johntsai.xyz](https://www.johntsai.xyz)
 
 博客园博客:[http://www.cnblogs.com/JohnTsai](http://www.cnblogs.com/JohnTsai)
+
+简书:[http://www.jianshu.com/users/07ba99ac6962/latest_articles](http://www.jianshu.com/users/07ba99ac6962/latest_articles)
+
+Google+:[https://plus.google.com/106757597621151145389/posts](https://plus.google.com/106757597621151145389/posts)
 
 邮箱:[JohnTsai.Work#gmail.com](mailto:JohnTsai.Work@gmail.com)
 
